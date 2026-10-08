@@ -1,0 +1,87 @@
+{
+  "mission_id": "HARMONY-CLOUDFLARE-ATOMIC-AB-001",
+  "run_id": "20261007T090013Z",
+  "evidence_manifest_sha256": "b32ba7610317dc0bc070fe291e769db66b3eaea54c15955a6715547c4bfb9754",
+  "canonical_initial_oid": "0b5a28cd6fc4b30f91ef40888af485139894584e",
+  "players": {
+    "A": {
+      "mok": "EFFICIENCY",
+      "ttl_seconds": 300,
+      "max_staleness_seconds": 300,
+      "base_oid": "0b5a28cd6fc4b30f91ef40888af485139894584e",
+      "candidate_oid": "66c4e76db7307f85bd679d1f023a8d8bf409cdfa",
+      "changed_files": [
+        "cache-policy.json"
+      ],
+      "validation": "PASS",
+      "execution": {
+        "enter_server_date": "Wed, 07 Oct 2026 09:01:22 GMT",
+        "yield_server_date": "Wed, 07 Oct 2026 09:01:29 GMT"
+      },
+      "rok_summary": "Efficiency candidate validated; alternative preserved."
+    },
+    "B": {
+      "mok": "FRESHNESS",
+      "ttl_seconds": 30,
+      "max_staleness_seconds": 30,
+      "base_oid": "0b5a28cd6fc4b30f91ef40888af485139894584e",
+      "candidate_oid": "40b8f510a72c96dba7e199c700004da67778c0a0",
+      "changed_files": [
+        "cache-policy.json"
+      ],
+      "validation": "PASS",
+      "execution": {
+        "enter_server_date": "Wed, 07 Oct 2026 09:01:22 GMT",
+        "yield_server_date": "Wed, 07 Oct 2026 09:01:28 GMT"
+      },
+      "rok_summary": "Freshness candidate validated."
+    }
+  },
+  "execution": {
+    "overlap_ms": 6000,
+    "timestamp_source": "Cloudflare Worker HTTP Date headers",
+    "timestamp_resolution_ms": 1000,
+    "separate_concurrent_processes": true,
+    "forks_only": true
+  },
+  "challenge": {
+    "reviewer": "A",
+    "reviewed_player": "B",
+    "new_mok": "Bounded structured challenge of Player B freshness candidate",
+    "authority": "Read-only review of B; no write authority over B or canonical",
+    "review_window": {
+      "enter": "Wed, 07 Oct 2026 09:04:02 GMT",
+      "yield": "Wed, 07 Oct 2026 09:04:06 GMT"
+    },
+    "review_checks": "PASS",
+    "b_oid_unchanged": true,
+    "efficiency": "A 300-second policy can avoid more repeated origin fetches than B 30-second policy for the same request pattern.",
+    "freshness": "B limits configured maximum staleness to 30 seconds versus A 300 seconds.",
+    "uncertainty": "No request mix, origin load, latency, or observed cache-hit data is present; actual cost and freshness impact cannot be quantified here.",
+    "question": "Is the 30-second freshness bound worth the potential increase in origin work for this workload?",
+    "disposition": "TRADEOFF_FOR_HUMAN_DECISION",
+    "winner_selected": false
+  },
+  "human_decision": {
+    "type": "AUTHORIZED_HUMAN_DECISION",
+    "selected_candidate": "B",
+    "approved_oid": "40b8f510a72c96dba7e199c700004da67778c0a0",
+    "reason": "For this demonstration, prefer the tighter 30-second freshness bound while preserving the efficiency alternative and its evidence.",
+    "decision_utc": "2026-10-08T01:40:46Z"
+  },
+  "promotion": {
+    "role": "separate canonical promoter",
+    "canonical_before": "0b5a28cd6fc4b30f91ef40888af485139894584e",
+    "approved_oid": "40b8f510a72c96dba7e199c700004da67778c0a0",
+    "canonical_after": "40b8f510a72c96dba7e199c700004da67778c0a0",
+    "exact_oid_binding": true,
+    "post_action_verify": "PASS",
+    "human_gate": "CLOSED",
+    "verified_utc": "2026-10-08T01:59:34Z"
+  },
+  "final_canonical_oid": "40b8f510a72c96dba7e199c700004da67778c0a0",
+  "final_player_states": {
+    "A": "WATCH",
+    "B": "WATCH"
+  }
+}
