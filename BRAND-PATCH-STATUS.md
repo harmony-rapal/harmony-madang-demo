@@ -1,0 +1,16 @@
+MISSION_ID=HARMONY-CLOUDFLARE-DEMO-BRAND-001-RETRY
+OFFICIAL_BRAND_SOURCE=https://github.com/harmony-rapal/harmony-runtime/blob/main/docs/BRAND.md
+OFFICIAL_LOGO_ASSET=docs/assets/logo-mono.svg (header and footer); docs/assets/logo-mark.svg (favicon)
+LOGO_PROVENANCE=PASS; all five official SVG assets fetched from harmony-runtime main; deployed logo-mono.svg SHA-256 matches source and local file: 9bd77b7e4ce70076a79f670d0fef8ec122ebc91ae919941d6932ebe8d7a583a4
+DEMO_NARRATIVE_UNCHANGED=PASS; public/app.js and scene content unchanged
+DEMO_DATA_UNCHANGED=PASS; before/after SHA-256 diff empty; deployed data hash matches local: 6e861d03cc144c189721a2234ab9d44d5f7e1547f430716e888d7e2be8281760
+DESKTOP_LAYOUT=PASS; 1440px browser check, official logo loaded at 3:1 aspect ratio, no horizontal overflow
+MOBILE_LAYOUT=PASS; 390px browser check, official logo loaded at 3:1 aspect ratio, no horizontal overflow
+SIX_SCENES=PASS; all six scenes, decision reveal, and reset checked in desktop and mobile browsers
+SECRET_SCAN=PASS; python3 scripts/check-public.py
+CLOUDFLARE_DEPLOY=PASS; existing harmony-madang-demo Worker, version 1116266d-d54d-453c-abd4-84745d1b7a8f
+PUBLIC_URL=https://harmony-madang-demo.yonghyun-kim7.workers.dev/
+PUBLIC_PAGE=HTTP_200
+DEMO_DATA=HTTP_200
+VERDICT=PASS
+FIRST_BLOCKER=NONE

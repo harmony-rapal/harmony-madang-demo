@@ -3,3 +3,11 @@ node_modules/
 .DS_Store
 
 codex-demo-ui.log
+
+# Internal builder records
+codex-*.log
+HARMONY-DEMO-*-BUILDER.txt
+HARMONY-DEMO-BRAND-RETRY.txt
+
+# Generated local seal
+SOURCE-SHA256.txt
