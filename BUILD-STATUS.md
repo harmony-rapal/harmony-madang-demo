@@ -18,7 +18,7 @@ REDUCED_MOTION=PASS
 SECRET_SCAN=PASS
 LOCAL_TESTS=PASS
 CLOUDFLARE_DEPLOY=PASS
-PUBLIC_URL=https://harmony-madang-demo.yonghyun-kim7.workers.dev
+PUBLIC_URL=https://k-harmony.rapal.tech
 VERDICT=PASS
 FIRST_BLOCKER=NONE
 
@@ -27,3 +27,4 @@ Verification notes:
 - Local browser checks passed at 1440px and 390px across all six scenes, keyboard navigation, decision reveal, replay controls, and overflow.
 - Public page and demo-data.json returned HTTP 200 on repeated post-deployment requests.
 - The documented global_fetch_strictly_public compatibility flag resolved intermittent Cloudflare error 1042 at the public workers.dev route.
+
