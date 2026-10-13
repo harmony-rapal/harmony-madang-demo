@@ -5,7 +5,7 @@
 A recorded, verified multi-agent coordination run built with **Cloudflare Workers + Artifacts**.
 
 **Live Demo:**
-https://harmony-madang-demo.yonghyun-kim7.workers.dev/
+https://k-harmony.rapal.tech/
 
 ---
 
@@ -81,11 +81,11 @@ Player B candidate:
 
 `40b8f510a72c96dba7e199c700004da67778c0a0`
 
-[A structured Challenge exposed an unresolved tradeoff:](https://k-harmony.rapal.tech/)
+A structured Challenge exposed an unresolved tradeoff:
 
 - A's 300s policy may reduce repeated origin work.
 - B limits configured maximum staleness to 30 seconds.
-[- The available evidence does not quantify the real workload tradeoff.](https://k-harmony.rapal.tech/)
+- The available evidence does not quantify the real workload tradeoff.
 
 Harmony therefore does not invent a winner.
 
@@ -161,7 +161,7 @@ It does not:
 
 - run new agents
 - choose a new winner
-- The available evidence does not quantify the real workload tradeoff.
+- issue write credentials
 - mutate Cloudflare Artifacts
 - modify canonical state
 
@@ -230,3 +230,4 @@ Apache License 2.0.
 **Coordination for an Agent Society**
 
 Built on Cloudflare Workers + Artifacts.
+
