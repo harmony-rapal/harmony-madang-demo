@@ -85,7 +85,7 @@ A structured Challenge exposed an unresolved tradeoff:
 
 - A's 300s policy may reduce repeated origin work.
 - B limits configured maximum staleness to 30 seconds.
-- The available evidence does not quantify the real workload tradeoff.
+[- The available evidence does not quantify the real workload tradeoff.](https://k-harmony.rapal.tech/)
 
 Harmony therefore does not invent a winner.
 
