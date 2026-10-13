@@ -81,7 +81,7 @@ Player B candidate:
 
 `40b8f510a72c96dba7e199c700004da67778c0a0`
 
-A structured Challenge exposed an unresolved tradeoff:
+[A structured Challenge exposed an unresolved tradeoff:](https://k-harmony.rapal.tech/)
 
 - A's 300s policy may reduce repeated origin work.
 - B limits configured maximum staleness to 30 seconds.
@@ -161,7 +161,7 @@ It does not:
 
 - run new agents
 - choose a new winner
-- issue write credentials
+- The available evidence does not quantify the real workload tradeoff.
 - mutate Cloudflare Artifacts
 - modify canonical state
 
